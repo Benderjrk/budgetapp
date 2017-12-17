@@ -5,7 +5,7 @@
 var budgetController = (function(){
 
   //data model for expenses and income
-  var Expenses = function(id, description, value) {
+  var Expense = function(id, description, value) {
       this.id = id;
       this.description = description;
       this.value = value;
@@ -34,7 +34,7 @@ var budgetController = (function(){
       var newItem, ID;
 
       //create new id if none then set as 0
-      if(ID > 0) {
+      if(data.allItems[type].length > 0) {
         ID = data.allItems[type][data.allItems[type].length-1].id + 1;
       } else {
         ID = 0;
